@@ -4,7 +4,7 @@ title:      "Spring拾遗-Spring事务"
 subtitle:   " \"Spring事务管理方式\""
 date:       2018-12-05 14:19:00
 author:     "Zero"
-header-img: "img/post-spring-bg-2018.jpeg"
+header-img: "img/post-spring-bg-2018.jpg"
 tags:
     - Spring
 ---
@@ -114,7 +114,7 @@ TransactionStatus的方法，如下图所示：
 | READ_UNCOMMITED | 允许你读取还未提交的改变了的数据。可能导致脏、幻、不可重复读 |
 | REPEATABLE_READ | 允许在并发事务已经提交后读取，可防止脏读，但幻读、不可重复读仍发生 |
 | SERIALIZABLE    | 完全服从ACID的隔离级别，确保不发生脏读、幻读、不可重复读。在所有的隔离级别中是最慢的，它是典型的通过完全锁定在事务中涉及的数据表来完成。 |
-|                 |                                                              |
+
 
 ### Spring事务的传播行为
 
@@ -127,7 +127,6 @@ TransactionStatus的方法，如下图所示：
 | PROPAGATION_NOT_SUPPORTED | 以非事务方式运行，如果有事务存在，挂起当前事务 |
 | PROPAGATION_NEVER         | 以非事务方式运行，如果有事务，抛出异常         |
 | PROPAGATION_NESTED        | 如果当前事务存在，则嵌套事务执行               |
-|                           |                                                |
 
 ## Spring事务实现方式
 
